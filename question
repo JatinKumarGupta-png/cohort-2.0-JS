@@ -1,0 +1,29 @@
+Beginner-Level JavaScript Function Questions
+🔹 Level 1 – Very Basic
+
+🔹 Level 2 – With Logic
+
+
+Write a function isPalindrome(str) that checks whether a word is a palindrome.
+
+Write a function sumArray(arr) that returns the sum of all elements in an array.
+
+Write a function findMax(arr) that returns the largest element in an array.
+
+Write a function table(n) that prints the multiplication table of n.
+
+🔹 Level 3 – Slightly Advanced Logic
+
+Write a function simpleInterest(p, r, t) that calculates simple interest.
+
+Write a function countDigits(num) that returns how many digits a number has.
+
+Write a function findGrade(marks) that prints "A", "B", "C", etc., based on marks.
+
+Write a function isPrime(num) that checks whether a number is prime or not.
+
+Write a function average(a, b, c) that returns the average of three numbers.
+
+
+
+
