@@ -1,0 +1,378 @@
+﻿var hdnRentalDetailId = '#hdnRentalDetailId',
+    chkSubmit = '#chkSubmit',
+    btnSubmit = '#btnSubmit',
+    btnConfirmationYes = '#btnConfirmationYes',
+    btnConfirmationNo = '#btnConfirmationNo';
+
+var MsgConfirmEnglish = "Are you sure you want to apply for this Aawaas?",
+    MsgConfirmHindi = "क्या आप आवास के लिए आवेदन करना चाहते हैं?";
+
+
+
+var lblProfileID = '#lblProfileID',
+    lblStudentName = '#lblStudentName',
+    lblFatherName = '#lblFatherName',
+    lblCaste = '#lblCaste',
+    lblDeclaredIncome = '#lblDeclaredIncome',
+lblStudentName = '#lblStudentName',
+    lblFatherName = '#lblFatherName',
+lblCaste = '#lblCaste',
+lblDeclaredIncome = '#lblDeclaredIncome',
+lblInstituteName = '#lblInstituteName',
+lblUniversityName = '#lblUniversityName',
+lblCourseLevel = '#lblCourseLevel',
+lblCourse = '#lblCourse',
+lblBranch = '#lblBranch',
+lblAcademicBatch = '#lblAcademicBatch',
+lblApplicationType = '#lblApplicationType',
+lblApplicationNumber = '#lblApplicationNumber',
+lblAcademicStatus = '#lblAcademicStatus',
+lblSubmittedRentalAmount = '#lblSubmittedRentalAmount',
+lblSanctionRentalAmount = '#lblSanctionRentalAmount',
+lblTotalRentalAmount = '#lblTotalRentalAmount',
+lblDateOfRental = '#lblDateOfRental',
+lblHeader = '#lblHeader',
+lblInstituteAddress = '#lblInstituteAddress',
+lblPermanentAddress = '#lblPermanentAddress',
+lblRentalAddress = '#lblRentalAddress',
+lblDistrict = '#lblDistrict',
+lblArea = '#lblArea',
+lblLocalBodyType = '#lblLocalBodyType',
+lblBlockName = '#lblBlockName',
+lblPanchayatName = '#lblPanchayatName',
+    lblVillageName = '#lblVillageName',
+lblLocalBodyName = '#lblLocalBodyName',
+lblDocument = '#lblDocument',
+lblDocumentNumber = '#lblDocumentNumber',
+lblAdmissionDate = '#lblAdmissionDate',
+    lblAmountApplicableDate = '#lblAmountApplicableDate',
+
+    lblXEnrollmentNo = '#lblXEnrollmentNo',
+    lblXBoard = '#lblXBoard',
+    lblXPassingYear = '#lblXPassingYear',
+    lblXIIEnrollmentNo = '#lblXIIEnrollmentNo',
+    lblXIIBoard = '#lblXIIBoard',
+    lblXIIPassingYear = '#lblXIIPassingYear',
+lblInstallmentNumber = '#lblInstallmentNumber',
+   lblApplicableRentalDuration = '#lblApplicableRentalDuration',
+    btnCancel = "#btnCancel",
+    btnPrint = "#btnPrint",
+        lblRentalAddressType = "#lblRentalAddressType",
+
+            btnBack = "#btnBack";
+
+
+function SetLevelValues() {
+
+    if ($(SystemLanguage).val() == 'H') {
+        $(lblProfileID).html("प्रोफाइल आईडी");
+        $(lblStudentName).html("छात्र का नाम");
+        $(lblFatherName).html("पिता का नाम");
+        $(lblCaste).html("जाति");
+        $(lblDeclaredIncome).html("घोषित आय");
+        $(lblInstituteName).html("संस्थान का नाम");
+        $(lblUniversityName).html("विश्वविद्यालय का नाम");
+        $(lblCourseLevel).html("कोर्स लेवल");
+        $(lblCourse).html("कोर्स");
+        $(lblBranch).html("ब्रांच");
+        //$(lblAcademicBatch).html("प्रवेश वर्ष");
+        $(lblAcademicBatch).html("प्रवेश वर्ष / शैक्षणिक वर्ष / कोर्स वर्ष");
+        $(lblApplicationType).html("आवेदन का प्रकार");
+        $(lblApplicationNumber).html("आवेदन पहचान आई डी या आवेदन की ID");
+        $(lblAcademicStatus).html("आवेदन की स्थिति");
+        // $(lblSubmittedRentalAmount).html("जमा की गयी किराये की राशि");
+        $(lblSanctionRentalAmount).html("सत्यापन के अधीन दी जाने वाली राशि (Rs./Month)"); //html("स्वीकृत किराये की राशि");
+        $(lblTotalRentalAmount).html("कुल किराया राशि");
+        $(lblDateOfRental).html("किराए प्रारम्भ की तिथि");
+        $(lblHeader).html("शीर्ष लेख");
+        $(lblInstituteAddress).html("संस्थान का पता");
+        $(lblPermanentAddress).html("स्थाई पता");
+        $(lblRentalAddress).html("किराये का पता");
+        $(lblDistrict).html("जिला");
+        $(lblArea).html("एरिया");
+        $(lblLocalBodyType).html("स्थानीय निकाय प्रकार");
+        $(lblBlockName).html("ब्लॉक का नाम");
+        $(lblPanchayatName).html("पंचायत का नाम");
+        $(lblVillageName).html("गाँव का नाम");
+        $(lblLocalBodyName).html("स्थानीय निकाय का नाम");
+        $(lblDocument).html("डॉक्यूमेंट");
+        $(lblDocumentNumber).html("डॉक्यूमेंट नंबर");
+        $(lblAdmissionDate).html('प्रवेश तिथि');
+        $(lblAmountApplicableDate).html('वह तारीख, जब से किराया राशि लागू होगी');
+
+        $(lblXEnrollmentNo).html("10th रोल नंबर");
+        $(lblXBoard).html("10th बोर्ड");
+        $(lblXPassingYear).html("10th उत्तीर्ण वर्ष");
+        $(lblXIIEnrollmentNo).html("12th रोल नंबर");
+        $(lblXIIBoard).html("12th बोर्ड");
+        $(lblXIIPassingYear).html("12th उत्तीर्ण वर्ष");
+        $(lblInstallmentNumber).html("किश्‍त प्रथम या द्वितीय");
+        $(lblApplicableRentalDuration).html("लागू किराया अवधि");
+        $(btnCancel).html("बंद करें");
+        $(btnPrint).html("प्रिंट करें");
+        $(lblRentalAddressType).html("किराये का पता प्रकार");
+        $(btnBack).html("डैशबोर्ड पर वापस जाएं!");
+
+        $(lblPreviousCourseNm).html("पिछले पाठ्यक्रम का नाम");
+        $(lblPreviousCourseYear).html("पिछला पाठ्यक्रम वर्ष");
+        $(lblPreviousCoursePer).html("पिछला कोर्स प्रतिशत");
+
+        //Recovery Details & Previous Scholarship
+        $("#hHead1").html("पिछली छात्रवृत्ति");
+        $("#hHead2").html("रिकवरी विवरण");
+        $("#lblPrevCourseName").html("पिछला पाठ्यक्रम");
+        $("#lblPrevBranch").html("पिछला ब्रांच");
+        $("#lblPrevInstituteName").html("पिछला महाविद्यालय");
+        $("#lblRecoveryApplicable").html("रिकवरी लागू");
+        $("#lblTotalRecoveryAmt").html("कुल रिकवरी राशि(Rs.)");
+        $("#lblNetScholarshipAmt").html("सत्यापन के अधीन दी जाने वाली अनुमानित नेट देय राशि (in Rs.)");
+        $("#lblRemainingRecoveryAmt").html("शेष रिकवरी योग्य राशि (Rs.)");
+        $("#lblPreviousNetScholarshipAmt").html("सत्यापन के अधीन दी जाने वाली पिछली आवास सहयता कुल राशि (प्रथम एवं द्वितीय किश्त) (in Rs.)");
+    }
+    else if ($(SystemLanguage).val() == 'E') {
+        $(lblProfileID).html("Profile ID");
+        $(lblStudentName).html("Student Name");
+        $(lblFatherName).html("Father Name");
+        $(lblCaste).html("Caste");
+        $(lblDeclaredIncome).html("Declared Income");
+        $(lblInstituteName).html("Institute Name");
+        $(lblUniversityName).html("University Name");
+        $(lblCourseLevel).html("Course Level");
+        $(lblCourse).html("Course");
+        $(lblBranch).html("Branch");
+        //$(lblAcademicBatch).html("Admission Year");
+        $(lblAcademicBatch).html("Admission Year / Academic Year / Course Year");
+        $(lblApplicationType).html("Application Type");
+        $(lblApplicationNumber).html("Application Number");
+        $(lblAcademicStatus).html("Application Status");
+        // $(lblSubmittedRentalAmount).html("Submitted Rental Amount");
+        $(lblSanctionRentalAmount).html("Amount to be given subject to verification (Rs./Month)");//.html("Sanction Rental Amount");
+        $(lblTotalRentalAmount).html("Total Rental Amount");
+        $(lblDateOfRental).html("Date Of Rental");
+        $(lblHeader).html("Header");
+        $(lblInstituteAddress).html("Institute Address");
+        $(lblPermanentAddress).html("Permanent Address");
+        $(lblRentalAddress).html("Rental Address");
+        $(lblDistrict).html("District");
+        $(lblArea).html("Area");
+        $(lblLocalBodyType).html("Local Body Type");
+        $(lblBlockName).html("Block Name");
+        $(lblPanchayatName).html("Panchayat Name");
+        $(lblVillageName).html("Village Name");
+        $(lblLocalBodyName).html("Local Body Name");
+        $(lblDocument).html("Document");
+        $(lblDocumentNumber).html("Document Number");
+        $(lblAdmissionDate).html('Admission Date');
+        $(lblAmountApplicableDate).html('That date, since the rent amount will be applicable');
+
+        $(lblXEnrollmentNo).html("10th Roll No.");
+        $(lblXBoard).html("10th Board");
+        $(lblXPassingYear).html("10th Passing Year");
+        $(lblXIIEnrollmentNo).html("12th Roll No.");
+        $(lblXIIBoard).html("12th Board");
+        $(lblXIIPassingYear).html("12th Passing Year");
+        $(lblInstallmentNumber).html("Installment Name");
+        $(lblApplicableRentalDuration).html("Applicable Rental Duration");
+
+        $(btnCancel).html("Cancel");
+        $(btnPrint).html("Print");
+        $(lblRentalAddressType).html("Rental Address Type");
+        $(btnBack).html("Back To Dashboard");
+
+    }
+}
+
+
+$(document).ready(function () {
+    SetLevelValues();
+
+    var href = $('#hdnvirtualPath').val() + "/Home/Dashboard";
+
+    $.ajax({
+        //url: '@Url.Action("sessionout", "Account")',
+        url: $('#hdnvirtualPath').val() + "/Aawaas/RediractionAssistedORStudent",
+        type: "POST",
+        contentType: false, // Not to set any content header
+        processData: false, // Not to process data
+        data: {},
+        async: false,
+        success: function (result) {
+
+            if (result != "" && result != null) {
+                debugger;
+
+                if (result.Data != null) {
+                    if (result.Data.UserType == "L") {
+                        href = result.AdditionalData;
+                    }
+                    else {
+                        // href = "http://164.100.196.73/adminbaseregistration//bridge.ashx?userid=Mzk1NA==&urldesti=http://164.100.196.73/adminbaseregistration/BenificaryProfileAccess/DashBoard/Index&roleid=8&salttime=08/11/2019 12:07:33&acturl=Login&UserName=dfgdfg&langvalue=en";
+                        href = result.Data.bridgeAddress + "/bridge.ashx?userid=" + result.Data.userid + "&urldesti=" + result.Data.urlDestination + "&roleid=" + result.Data.roleId + "&salttime=08/11/2019 12:07:33&acturl=Login&UserName=" + result.Data.UserName + "&langvalue=" + result.Data.langValue;
+
+                    }
+                } else {
+                    href = result.AdditionalData;
+
+                }
+
+            }
+            else {
+                href = $('#hdnvirtualPath').val() + "/Home/Dashboard";
+            }
+        },
+    });
+
+    //---
+
+    $(btnCancel).click(function () {
+        window.location.href = href;
+    });
+
+
+
+    $(btnBack).click(function () {
+
+        window.location.href = href;
+
+        //var lang = "en";
+        //var url = window.location.href;
+        //var d = new Date,
+        //  dformat = [("0" + d.getDate()).slice(-2),
+        //    ("0" + (d.getMonth() + 1)).slice(-2),
+        //             d.getFullYear()].join('/') + ' ' +
+        //            [("0" + (d.getHours())).slice(-2),
+        //                ("0" + (d.getMinutes())).slice(-2),
+        //                ("0" + (d.getSeconds())).slice(-2)].join(':');
+
+        ////var userid = $('#hdnuserid').val();
+        ////var roleid = $('#hdnroleid').val();
+        ////var UserName = $('#hdnUserName').val();
+
+        //var userid = $('#hdnuseridAdmin').val();
+        //var roleid = $('#hdnroleidAdmin').val();
+        //var encodedString = Base64.encode(userid);
+        //var url12 = 'http://localhost:53765/BenificaryProfileAccess/DashBoard/Index';
+        ////var mainurl = 'http://localhost:53761/bridge.ashx?userid=' + encodedString + '&urldesti='
+        ////    + url12 + '&roleid=' + roleid + '&salttime=' + dformat + '&acturl='
+        ////    + url + '&UserName=dfgdfg&langvalue=' + lang;
+
+        //window.location.href = 'http://localhost:53765/bridge.ashx?userid=' + encodedString + '&urldesti='
+        //    + url12 + '&roleid=' + roleid + '&salttime=' + dformat + '&acturl='
+        //    + url + '&UserName=dfgdfg&langvalue=' + lang;
+    });
+
+    //var aname = $('#hdnFlag').val();
+    //var hdncid = $('#hdncid').val();
+    //if (hdncid == '0') {
+    //    $('#ancredirect').css("display", "none");
+    //    var url = window.location.href;
+    //    var d = new Date,
+    //      dformat = [("0" + d.getDate()).slice(-2),
+    //        ("0" + (d.getMonth() + 1)).slice(-2),
+    //                 d.getFullYear()].join('/') + ' ' +
+    //                [("0" + (d.getHours())).slice(-2),
+    //                    ("0" + (d.getMinutes())).slice(-2),
+    //                    ("0" + (d.getSeconds())).slice(-2)].join(':');
+
+    //    var userid = $('#hdnuserid123').val();
+    //    var roleid = $('#hdnroleid123').val();
+    //    var encodedString = Base64.encode(userid);
+    //    var url12 = 'http://localhost:53761/BenificaryProfileAccess/DashBoard/Index';
+    //    //var mainurl = 'http://localhost:53761/bridge.ashx?userid=' + encodedString + '&urldesti='
+    //    //    + url12 + '&roleid=' + roleid + '&salttime=' + dformat + '&acturl='
+    //    //    + url + '&UserName=dfgdfg&langvalue=' + lang;
+
+    //    window.location.href = 'http://localhost:53761/bridge.ashx?userid=' + encodedString + '&urldesti='
+    //        + url12 + '&roleid=' + roleid + '&salttime=' + dformat + '&acturl='
+    //        + url + '&UserName=dfgdfg&langvalue=' + lang;
+
+    //   // $('#ancredirect').attr("href", mainurl);
+    //}
+    //else {
+
+    //    debugger;
+    //    $('#ancredirect').css("display", "block");
+
+    //}
+
+
+
+
+    //$(btnSubmit).attr("disabled", true);
+    //$(chkSubmit).change(function () {
+    //    if ($(this).is(":checked")) {
+    //        $(btnSubmit).attr("disabled", false);
+    //    }
+    //    else {
+    //        $(btnSubmit).attr("disabled", true);
+    //    }
+    //});
+
+    //$(btnSubmit).click(function () {
+    //    if ($(SystemLanguage).val() == 'H') {
+    //        SaveConfirmation("", MsgConfirmHindi);
+    //    }
+    //    else {
+    //        SaveConfirmation("", MsgConfirmEnglish);
+    //    }
+    //});
+
+    //$(btnConfirmationYes).on("click", function () {
+    //    $("#modalSaveConfirmation").modal('hide');
+    //    var Model = {
+    //        ApplicationRentalId: $(hdnRentalDetailId).val()
+    //    };
+    //    AccessControler.PostIsActive(Model, 20000, $('#hdnvirtualPath').val() + "/AawaasYojna/Aawaas/ApplicationSubmit", function (response) {
+    //        if (response != null) {
+    //            if (response.StatusCode == 200) {
+    //                window.location.href = "/AawaasYojna/Aawaas/ApplicationPrint";
+    //                //if ($(SystemLanguage).val() == 'H') {
+    //                //    showMPTAASAlert("divAlterForMPTAAS", true, "आपने आवेदन संख्या " + response.AdditionalData + " के साथ आवास के लिए सफलतापूर्वक आवेदन किया है.", 10000);                       
+    //                //}
+    //                //else {
+    //                //    showMPTAASAlert("divAlterForMPTAAS", true, "You have Successfully applied for fresh Aawaas with application Number " + response.AdditionalData + ".", 10000);
+    //                //}
+    //                //return false;
+    //            }
+    //        }
+    //    });
+    //});
+
+    //$(btnConfirmationNo).on("click", function () {
+    //    $("#modalSaveConfirmation").modal('hide');
+    //    return false;
+    //});
+    //$(btnCancel).click(function () {
+    //    if (confirm('Are you sure to Cancel this Application? If you Cancel this application then you need to re apply for the Aawaas all over again.')) {
+    //        var Model = {
+    //            ApplicationDetailId: $(hdnApplicationDetailId).val()
+    //        };
+    //        //AccessControler.PostIsActive(Model, 20000, $('#hdnvirtualPath').val() + "/PMS/Scholarship/DeleteApplicationRequest", function (response) {
+    //        AccessControler.PostIsActive(Model, 20000, $('#hdnvirtualPath').val() + "", function (response) {
+    //            if (response != null) {
+    //                if (response.StatusCode == 200) {
+    //                    showMPTAASAlert("divAlterForMPTAAS", true, "Your application request haas been canceled. Please go to the Application Apply section in order to apply for the aawaas.", 10000);
+    //                    setTimeout(function () {
+    //                        window.location.href = $('#hdnvirtualPath').val() + '/Home/DashBoard';
+    //                    }, 5000);
+    //                }
+    //            }
+    //        });
+    //    }
+    //});
+
+});
+
+function SaveConfirmation(title, msg) {
+    var $confirm = $("#modalSaveConfirmation");
+    $confirm.modal('show');
+    $("#lblTitleSaveConfirmation").html(title);
+    $("#lblMsgSaveConfirmation").html(msg);
+}
+console.log($(hdnuserDepartment).val());
+if ($(hdnuserDepartment).val() == "1") {
+    $(divPreviousMarksheetDetails).css("display", "contents");
+} else {
+    $(divPreviousMarksheetDetails).css("display", "none");
+}
+

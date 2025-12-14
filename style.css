@@ -11,64 +11,49 @@ html,body{
 main{
     height: 100%;
     width: 100%;
-    background-color: #000000;
+    background-color: #131313;
     display: flex;
     align-items: center;
     justify-content: center;
-}.card{
-    height: 300px;
-    width: 500px;
-    background-color: #d9d6d6;
-    border-radius: 5px;
-    /* border: none; */
-    padding: 30px;
-    box-shadow: 70px ,15px, 10px, red;
+} 
+.card{
+    background-color: #e5dada;
+    border-radius: 10px;
 }
-p{
-    font-size: 18px;
-    font-weight: 600;
-    margin: 10px;
+.card div{
+    border-radius: 20px;
+    width: 250px;    
+    position: relative;
+    overflow: hidden;
 }
-span{
-    color: #324f90;
-}
-.outer{
-    height: 20px;
-    width: 100%;
-    background-color: #a89191;
-    border-radius: 12px;
-    margin-top: 50px;
+.card img{
+   width: 100%;
+   height: 100%;
+    object-fit: cover; 
+    padding: 20px;
+    margin-bottom: 0;
     
 }
-.inner{
-    height: 100%;
-    width: 0%;
-    background-color: #324f90;
-    border-radius: 50px;
-   
+.card h2{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
 }
-.bottom{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 12px;
+.card i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    font-size: 70px;
+               /* //COMPLETED CODE// */
+    background-image: url(https://t3.ftcdn.net/jpg/01/15/99/56/360_F_115995657_RKhfaUiWm4L024V7owDclbCKxQBPIhIZ.jpg);
+    background-size:cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    transform:translate(-50%,-50%) scale(0) rotate(-60deg);
+    transition: all cubic-bezier(.6,1.48,.47,.97) 0.4s;
+
+
 }
-h2{
-    font-size: 30px;
-    font-weight: 300;
-}
- button{
-    padding: 15px 30px;
-    font-size: 15px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 8px;
-    background-color: #165a18;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-button:active{
-    transform: scale(0.95);
-} 
